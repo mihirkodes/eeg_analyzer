@@ -190,7 +190,7 @@ def api_predict():
 
 if __name__ == '__main__':
     os.makedirs(DATA_DIR, exist_ok=True)
-    port = 5004
+    port = int(os.environ.get("PORT", 5004))
     print(f"Starting EEG Prediction UI...")
     print(f"Open http://localhost:{port} in your browser")
     print(f"Available test files: {get_test_files()}")
