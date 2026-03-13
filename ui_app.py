@@ -194,4 +194,4 @@ if __name__ == '__main__':
     print(f"Starting EEG Prediction UI...")
     print(f"Open http://localhost:{port} in your browser")
     print(f"Available test files: {get_test_files()}")
-    app.run(debug=False, port=port, host='127.0.0.1')
+    app.run(debug=False, port=port, host='0.0.0.0')
