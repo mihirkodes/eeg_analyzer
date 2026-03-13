@@ -4,6 +4,6 @@ __pycache__
 *.pyc
 .venv
 .env
-*.joblib
 *.results
 README.md
+data/reference_data.csv

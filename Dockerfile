@@ -11,11 +11,8 @@ RUN apt-get update && \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
+# Copy project files (includes pre-trained .joblib models)
 COPY . .
-
-# Train all models at build time so they're baked into the image
-RUN python eeg_ml.py all
 
 # Railway injects PORT env var; Flask must bind to 0.0.0.0
 ENV PORT=5004
